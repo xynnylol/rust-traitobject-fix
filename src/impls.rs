@@ -1,5 +1,4 @@
 use Trait;
-
 unsafe impl Trait for ::std::any::Any + Send { }
 unsafe impl Trait for ::std::any::Any + Sync { }
 unsafe impl Trait for ::std::any::Any + Send + Sync { }
@@ -67,16 +66,11 @@ unsafe impl<T, I> Trait for ::std::iter::IntoIterator<IntoIter=I, Item=T> { }
 unsafe impl<T> Trait for ::std::iter::Iterator<Item=T> + Send { }
 unsafe impl<T> Trait for ::std::iter::Iterator<Item=T> + Sync { }
 unsafe impl<T> Trait for ::std::iter::Iterator<Item=T> + Send + Sync { }
-unsafe impl Trait for ::std::marker::Send + Send { }
-unsafe impl Trait for ::std::marker::Send + Sync { }
-unsafe impl Trait for ::std::marker::Send + Send + Sync { }
-unsafe impl Trait for ::std::marker::Sync + Send { }
-unsafe impl Trait for ::std::marker::Sync + Sync { }
-unsafe impl Trait for ::std::marker::Sync + Send + Sync { }
+unsafe impl Trait for Send { }
+unsafe impl Trait for Sync { }
 unsafe impl Trait for ::std::ops::Drop + Send { }
 unsafe impl Trait for ::std::ops::Drop + Sync { }
 unsafe impl Trait for ::std::ops::Drop + Send + Sync { }
 unsafe impl Trait for ::std::string::ToString + Send { }
 unsafe impl Trait for ::std::string::ToString + Sync { }
 unsafe impl Trait for ::std::string::ToString + Send + Sync { }
-
